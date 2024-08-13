@@ -12,10 +12,4 @@ resource "azurerm_service_plan" "plans" {
   per_site_scaling_enabled     = try(each.value.per_site_scaling_enabled, false)
   zone_balancing_enabled       = try(each.value.zone_balancing_enabled, false)
   tags                         = try(var.tags, {})
-  timeouts {
-    create = try(each.value.timeouts.create, "60m")
-    read   = try(each.value.timeouts.read, "5m")
-    update = try(each.value.timeouts.update, "60m")
-    delete = try(each.value.timeouts.delete, "60m")
-  }
 }
