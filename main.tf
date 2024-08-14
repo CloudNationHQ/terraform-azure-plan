@@ -3,7 +3,7 @@ resource "azurerm_service_plan" "plans" {
 
   name                         = each.value.name
   location                     = coalesce(lookup(each.value, "location", null), var.location)
-  resource_group_name          = coalesce(lookup(each.value, "resourcegroup", null), var.resource_group)
+  resource_group_name          = coalesce(lookup(each.value, "resource_group", null), var.resource_group)
   os_type                      = each.value.os_type
   sku_name                     = each.value.sku_name
   app_service_environment_id   = try(each.value.app_service_environment_id, null)
