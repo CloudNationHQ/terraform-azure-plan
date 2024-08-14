@@ -18,7 +18,7 @@ module "rg" {
 }
 
 module "service_plan" {
-  #   source  = "cloudnationhq/service-plan/azure"
+  #   source  = "cloudnationhq/plan/azure"
   #   version = "~> 0.1"
   source = "../../"
 

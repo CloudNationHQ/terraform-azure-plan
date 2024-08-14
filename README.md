@@ -1,13 +1,16 @@
-# Azure Service Plans Terraform Module
+# Service Plans
 
-This Terraform module streamlines the creation and management of Azure Service Plans. It provides a flexible and customizable solution for deploying fully-configured instances, incorporating best practices and offering a variety of options to suit different needs.
+This terraform module simplifies the deployment and management of azure service plans, offering flexible configuration options. It facilitates efficient scaling and optimizes resource allocation, streamlining the overall management process.
 
 ## Goals
 
-- **Structured Data Management**: Create a logical data structure by combining and grouping related resources together in a complex object.
-- **Reusability**: Promote reusability by making the module a repeatable component, simplifying the process of building diverse workloads and platform accelerators consistently.
-- **API Alignment**: Utilize keys and values in the object that correspond to the REST API's structure, enabling iterations and increasing practical value over time.
-- **Separation of Logic and Configuration**: Separate logic from configuration in the module to enhance scalability, ease of customization, and manageability.
+The main objective is to create a more logic data structure, achieved by combining and grouping related resources together in a complex object.
+
+The structure of the module promotes reusability. It's intended to be a repeatable component, simplifying the process of building diverse workloads and platform accelerators consistently.
+
+A primary goal is to utilize keys and values in the object that correspond to the REST API's structure. This enables us to carry out iterations, increasing its practical value as time goes on.
+
+A last key goal is to separate logic from configuration in the module, thereby enhancing its scalability, ease of customization, and manageability.
 
 ## Non-Goals
 
@@ -22,11 +25,7 @@ End-to-end testing is not conducted on these modules, as they are individual com
 ## Features
 
 - Manages multiple service plans.
-- Supports various configurations for service plans.
 - Utilization of Terratest for robust validation.
-- Provides maintenance, high availability, and robust management options.
-- Ability to generate a user-assigned identity or bring your own if specified.
-- Flexible configuration of multiple service plan parameters.
 
 ## Requirements
 
@@ -43,23 +42,25 @@ End-to-end testing is not conducted on these modules, as they are individual com
 
 ## Resources
 
-| Name                       | Type                              |
-|----------------------------|-----------------------------------|
-| azurerm_service_plan       | resource                          |
+| Name | Type |
+|------|------|
+| [azurerm_service_plan](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/service_plan) | resource |
 
 ## Inputs
 
-| Name           | Description                                 | Type   | Required |
-|----------------|---------------------------------------------|--------|----------|
-| plans          | Describes service plan related configuration| object | yes      |
-| tags           | Tags to be added to the resources           | map(string) | no      |
+| Name | Description | Type | Required |
+| :-- | :-- | :-- | :-- |
+| `plans` | contains service plans configuration | object | yes |
+| `naming` | used for naming purposes | string | no |
+| `location` | default azure region to be used | string | no |
+| `resourcegroup` | default resource group to be used | string | no |
+| `tags` | tags to be added to the resources | map(string) | no |
 
 ## Outputs
 
-| Name               | Description                       |
-|--------------------|-----------------------------------|
-| service_plan_names | Service plan names                |
-| service_plan_ids   | Service plan IDs                  |
+| Name | Description |
+| :-- | :-- |
+| `plans` | contains service plans configuration |
 
 ## Testing
 
@@ -87,11 +88,13 @@ Module is maintained by [these awesome contributors](https://github.com/cloudnat
 
 ## Contributing
 
-We welcome contributions from the community! Whether it's reporting a bug, suggesting a new feature, or submitting a pull request, your input is highly valued. For more information, please see our contribution [guidelines](https://github.com/CloudNationHQ/terraform-azure-mysql/blob/main/CONTRIBUTING.md).
+We welcome contributions from the community! Whether it's reporting a bug, suggesting a new feature, or submitting a pull request, your input is highly valued.
+
+For more information, please see our contribution [guidelines](https://github.com/CloudNationHQ/terraform-azure-plan/blob/main/CONTRIBUTING.md).
 
 ## License
 
-MIT Licensed. See [LICENSE](https://github.com/cloudnationhq/terraform-azure-mysql/blob/main/LICENSE) for full details.
+MIT Licensed. See [LICENSE](https://github.com/cloudnationhq/terraform-azure-plan/blob/main/LICENSE) for full details.
 
 ## Reference
 

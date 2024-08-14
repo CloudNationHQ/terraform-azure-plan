@@ -1,8 +1,9 @@
 variable "naming" {
   description = "used for naming purposes"
-  type        = map(string)
+  type        = mapA(string)
   default     = {}
 }
+
 variable "location" {
   description = "default azure region to be used."
   type        = string
@@ -16,7 +17,7 @@ variable "resource_group" {
 }
 
 variable "plans" {
-  description = "service plans configuration"
+  description = "contains service plans configuration"
   type        = any
 }
 
