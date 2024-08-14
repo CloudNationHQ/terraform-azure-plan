@@ -1,6 +1,6 @@
 variable "naming" {
   description = "used for naming purposes"
-  type        = mapA(string)
+  type        = map(string)
   default     = {}
 }
 
