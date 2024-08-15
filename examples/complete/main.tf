@@ -19,7 +19,7 @@ module "rg" {
 
 module "service_plan" {
   source  = "cloudnationhq/plan/azure"
-  version = "~> 0.1"
+  version = "~> 1.0"
 
   plans = {
     demo = {
