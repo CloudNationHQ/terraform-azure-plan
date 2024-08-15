@@ -1,6 +1,6 @@
-# Default
+# Complete
 
-This example illustrates the default setup, in its simplest form.
+This example highlights the complete usage.
 
 ## Types
 
