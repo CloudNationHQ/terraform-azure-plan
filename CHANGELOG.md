@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/CloudNationHQ/terraform-azure-plan/compare/v2.2.0...v3.0.0) (2025-05-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* The data structure changed, causing a recreate on existing resources.
+
+### Features
+
+* small refactor ([#23](https://github.com/CloudNationHQ/terraform-azure-plan/issues/23)) ([205a9cd](https://github.com/CloudNationHQ/terraform-azure-plan/commit/205a9cdefff5cf94d16d7c2ffbf49f832141ea8a))
+
 ## [2.2.0](https://github.com/CloudNationHQ/terraform-azure-plan/compare/v2.1.0...v2.2.0) (2024-11-11)
 
 
