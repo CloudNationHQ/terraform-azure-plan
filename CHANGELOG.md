@@ -10,6 +10,15 @@
 ### Features
 
 * small refactor ([#23](https://github.com/CloudNationHQ/terraform-azure-plan/issues/23)) ([205a9cd](https://github.com/CloudNationHQ/terraform-azure-plan/commit/205a9cdefff5cf94d16d7c2ffbf49f832141ea8a))
+* updated documentation
+* added type definitions
+* added submodule app service environment
+* added multiple example usages
+
+### Upgrade from v2.2.0 to v3.0.0:
+
+- Update module reference to: `version = "~> 3.0"`
+- The property and variable resource_group is renamed to resource_group_name
 
 ## [2.2.0](https://github.com/CloudNationHQ/terraform-azure-plan/compare/v2.1.0...v2.2.0) (2024-11-11)
 
