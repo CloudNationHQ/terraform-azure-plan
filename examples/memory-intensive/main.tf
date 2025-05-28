@@ -1,6 +1,6 @@
 module "naming" {
   source  = "cloudnationhq/naming/azure"
-  version = "~> 0.1"
+  version = "~> 0.24"
 
   suffix = ["demo", "dev"]
 }
@@ -19,15 +19,17 @@ module "rg" {
 
 module "service_plan" {
   source  = "cloudnationhq/plan/azure"
-  version = "~> 2.0"
+  version = "~> 3.0"
+
+  resource_group_name = module.rg.groups.demo.name
+  location            = module.rg.groups.demo.location
 
   plans = {
-    demo = {
-      name           = module.naming.app_service_plan.name
-      resource_group = module.rg.groups.demo.name
-      location       = module.rg.groups.demo.location
-      os_type        = "Linux"
-      sku_name       = "F1"
+    memory_heavy = {
+      name                   = module.naming.app_service_plan.name_unique
+      os_type                = "Linux"
+      sku_name               = "P2mv3"
+      zone_balancing_enabled = true
     }
   }
 }
