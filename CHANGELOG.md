@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/CloudNationHQ/terraform-azure-plan/compare/v3.0.0...v3.0.1) (2026-02-17)
+
+
+### Bug Fixes
+
+* remove faulty validations ([#25](https://github.com/CloudNationHQ/terraform-azure-plan/issues/25)) ([dc3fa43](https://github.com/CloudNationHQ/terraform-azure-plan/commit/dc3fa43548d038f2119ec6429aa815fd9de316b2))
+
 ## [3.0.0](https://github.com/CloudNationHQ/terraform-azure-plan/compare/v2.2.0...v3.0.0) (2025-05-28)
 
 
