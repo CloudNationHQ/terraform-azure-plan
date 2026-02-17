@@ -130,7 +130,7 @@ For more information, please see our contribution [guidelines](./CONTRIBUTING.md
 
 MIT Licensed. See [LICENSE](https://github.com/cloudnationhq/terraform-azure-plan/blob/main/LICENSE) for full details.
 
-## Reference
+## References
 
 - [Documentation](https://learn.microsoft.com/en-us/azure/app-service/overview-hosting-plans)
 - [Rest Api](https://learn.microsoft.com/en-us/rest/api/appservice/app-service-plans?view=rest-appservice-2023-12-01)
