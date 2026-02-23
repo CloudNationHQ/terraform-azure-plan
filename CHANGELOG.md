@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.0](https://github.com/CloudNationHQ/terraform-azure-plan/compare/v3.0.1...v3.1.0) (2026-02-23)
+
+
+### Features
+
+* **deps:** bump github.com/cloudnationhq/az-cn-go-validor in /tests ([#27](https://github.com/CloudNationHQ/terraform-azure-plan/issues/27)) ([826d9d2](https://github.com/CloudNationHQ/terraform-azure-plan/commit/826d9d2f2acffb8af4533ef863026e2f130d9a18))
+
 ## [3.0.1](https://github.com/CloudNationHQ/terraform-azure-plan/compare/v3.0.0...v3.0.1) (2026-02-17)
 
 
