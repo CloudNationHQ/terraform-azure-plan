@@ -1,17 +1,18 @@
 variable "plans" {
   description = "contains all service plans configuration"
   type = map(object({
-    name                         = string
-    os_type                      = string
-    sku_name                     = string
-    resource_group_name          = optional(string, null)
-    location                     = optional(string, null)
-    app_service_environment_id   = optional(string, null)
-    maximum_elastic_worker_count = optional(number, null)
-    worker_count                 = optional(number, null)
-    per_site_scaling_enabled     = optional(bool, false)
-    zone_balancing_enabled       = optional(bool, false)
-    tags                         = optional(map(string))
+    name                            = string
+    os_type                         = string
+    sku_name                        = string
+    resource_group_name             = optional(string, null)
+    location                        = optional(string, null)
+    app_service_environment_id      = optional(string, null)
+    premium_plan_auto_scale_enabled = optional(bool, false)
+    maximum_elastic_worker_count    = optional(number, null)
+    worker_count                    = optional(number, null)
+    per_site_scaling_enabled        = optional(bool, false)
+    zone_balancing_enabled          = optional(bool, false)
+    tags                            = optional(map(string))
   }))
 
   validation {
