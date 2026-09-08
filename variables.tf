@@ -4,23 +4,16 @@ variable "plans" {
     name                            = string
     os_type                         = string
     sku_name                        = string
-    resource_group_name             = optional(string, null)
-    location                        = optional(string, null)
-    app_service_environment_id      = optional(string, null)
-    premium_plan_auto_scale_enabled = optional(bool, false)
-    maximum_elastic_worker_count    = optional(number, null)
-    worker_count                    = optional(number, null)
-    per_site_scaling_enabled        = optional(bool, false)
+    resource_group_name             = optional(string)
+    location                        = optional(string)
+    app_service_environment_id      = optional(string)
+    premium_plan_auto_scale_enabled = optional(bool)
+    maximum_elastic_worker_count    = optional(number)
+    worker_count                    = optional(number)
+    per_site_scaling_enabled        = optional(bool)
     zone_balancing_enabled          = optional(bool, false)
     tags                            = optional(map(string))
   }))
-
-  validation {
-    condition = alltrue([
-      for plan_key, plan in var.plans : contains(["Linux", "Windows"], plan.os_type)
-    ])
-    error_message = "All plans must have os_type set to either 'Linux' or 'Windows'."
-  }
 }
 
 variable "location" {

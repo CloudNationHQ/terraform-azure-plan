@@ -1,9 +1,7 @@
 # environment
-resource "azurerm_app_service_environment_v3" "env" {
+resource "azurerm_app_service_environment_v3" "this" {
   resource_group_name = coalesce(
-    lookup(
-      var.environment, "resource_group_name", null
-    ), var.resource_group_name
+    var.environment.resource_group_name, var.resource_group_name
   )
 
   name                                   = var.environment.name
@@ -15,9 +13,7 @@ resource "azurerm_app_service_environment_v3" "env" {
   dedicated_host_count                   = var.environment.dedicated_host_count
 
   dynamic "cluster_setting" {
-    for_each = try(
-      var.environment.cluster_settings, {}
-    )
+    for_each = var.environment.cluster_settings
 
     content {
       name  = cluster_setting.value.name

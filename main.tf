@@ -1,15 +1,12 @@
-resource "azurerm_service_plan" "plans" {
+resource "azurerm_service_plan" "this" {
   for_each = var.plans
 
   resource_group_name = coalesce(
-    lookup(
-      each.value, "resource_group_name", null
-    ), var.resource_group_name
+    each.value.resource_group_name, var.resource_group_name
   )
 
   location = coalesce(
-    lookup(each.value, "location", null
-    ), var.location
+    each.value.location, var.location
   )
 
   name                            = each.value.name
