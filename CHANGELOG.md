@@ -1,5 +1,19 @@
 # Changelog
 
+## [4.0.0](https://github.com/CloudNationHQ/terraform-azure-plan/compare/v3.1.0...v4.0.0) (2026-09-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* this change causes recreates
+
+### Features
+
+* azurerm provider 5 upgrade ([#36](https://github.com/CloudNationHQ/terraform-azure-plan/issues/36)) ([64a64c4](https://github.com/CloudNationHQ/terraform-azure-plan/commit/64a64c4037e8f3965e9e7452823207c0e8e509be))
+* **deps:** bump github.com/cloudnationhq/az-cn-go-validor in /tests ([#31](https://github.com/CloudNationHQ/terraform-azure-plan/issues/31)) ([cddb586](https://github.com/CloudNationHQ/terraform-azure-plan/commit/cddb586ac4180e4a74e0d5e4704894a63b2ed01d))
+* **deps:** bump github.com/cloudnationhq/az-cn-go-validor in /tests ([#33](https://github.com/CloudNationHQ/terraform-azure-plan/issues/33)) ([d31a0a7](https://github.com/CloudNationHQ/terraform-azure-plan/commit/d31a0a7e1aace2fe85d47d09deb2d1348fe3ab9c))
+* **deps:** bump golang.org/x/crypto from 0.45.0 to 0.52.0 in /tests ([#34](https://github.com/CloudNationHQ/terraform-azure-plan/issues/34)) ([ba5c11b](https://github.com/CloudNationHQ/terraform-azure-plan/commit/ba5c11b1dec4f47d1e4bf51714ad19666bb6efd4))
+
 ## [3.1.0](https://github.com/CloudNationHQ/terraform-azure-plan/compare/v3.0.1...v3.1.0) (2026-03-05)
 
 
