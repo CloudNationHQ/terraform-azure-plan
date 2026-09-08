@@ -9,19 +9,19 @@ The following requirements are needed by this module:
 
 - <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) (~> 1.0)
 
-- <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) (~> 4.0)
+- <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) (~> 5.0)
 
 ## Providers
 
 The following providers are used by this module:
 
-- <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) (~> 4.0)
+- <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) (~> 5.0)
 
 ## Resources
 
 The following resources are used by this module:
 
-- [azurerm_app_service_environment_v3.env](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service_environment_v3) (resource)
+- [azurerm_app_service_environment_v3.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service_environment_v3) (resource)
 
 ## Required Inputs
 
@@ -37,12 +37,12 @@ Type:
 object({
     name                                   = string
     subnet_id                              = string
-    resource_group_name                    = optional(string, null)
-    internal_load_balancing_mode           = optional(string, "None")
-    zone_redundant                         = optional(bool, false)
-    allow_new_private_endpoint_connections = optional(bool, null)
-    remote_debugging_enabled               = optional(bool, false)
-    dedicated_host_count                   = optional(number, null)
+    resource_group_name                    = optional(string)
+    internal_load_balancing_mode           = optional(string)
+    zone_redundant                         = optional(bool)
+    allow_new_private_endpoint_connections = optional(bool)
+    remote_debugging_enabled               = optional(bool)
+    dedicated_host_count                   = optional(number)
     cluster_settings = optional(map(object({
       name  = string
       value = string

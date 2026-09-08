@@ -1,13 +1,13 @@
 module "naming" {
   source  = "cloudnationhq/naming/azure"
-  version = "~> 0.24"
+  version = "~> 0.32"
 
   suffix = ["demo", "dev"]
 }
 
 module "rg" {
   source  = "cloudnationhq/rg/azure"
-  version = "~> 2.0"
+  version = "~> 3.0"
 
   groups = {
     demo = {
@@ -19,9 +19,8 @@ module "rg" {
 
 module "network" {
   source  = "cloudnationhq/vnet/azure"
-  version = "~> 9.0"
+  version = "~> 10.0"
 
-  naming = local.naming
 
   vnet = {
     name                = module.naming.virtual_network.name
@@ -46,7 +45,7 @@ module "network" {
 
 module "service_plan" {
   source  = "cloudnationhq/plan/azure"
-  version = "~> 3.0"
+  version = "~> 4.0"
 
   resource_group_name = module.rg.groups.demo.name
   location            = module.rg.groups.demo.location
@@ -64,7 +63,7 @@ module "service_plan" {
 
 module "ase_secure" {
   source  = "cloudnationhq/plan/azure//modules/app-service-environment"
-  version = "~> 3.0"
+  version = "~> 4.0"
 
   environment = {
     name                         = module.naming.app_service_environment.name_unique

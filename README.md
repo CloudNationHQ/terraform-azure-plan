@@ -23,19 +23,19 @@ The following requirements are needed by this module:
 
 - <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) (~> 1.0)
 
-- <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) (~> 4.0)
+- <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) (~> 5.0)
 
 ## Providers
 
 The following providers are used by this module:
 
-- <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) (~> 4.0)
+- <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) (~> 5.0)
 
 ## Resources
 
 The following resources are used by this module:
 
-- [azurerm_service_plan.plans](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/service_plan) (resource)
+- [azurerm_service_plan.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/service_plan) (resource)
 
 ## Required Inputs
 
@@ -52,13 +52,13 @@ map(object({
     name                            = string
     os_type                         = string
     sku_name                        = string
-    resource_group_name             = optional(string, null)
-    location                        = optional(string, null)
-    app_service_environment_id      = optional(string, null)
-    premium_plan_auto_scale_enabled = optional(bool, false)
-    maximum_elastic_worker_count    = optional(number, null)
-    worker_count                    = optional(number, null)
-    per_site_scaling_enabled        = optional(bool, false)
+    resource_group_name             = optional(string)
+    location                        = optional(string)
+    app_service_environment_id      = optional(string)
+    premium_plan_auto_scale_enabled = optional(bool)
+    maximum_elastic_worker_count    = optional(number)
+    worker_count                    = optional(number)
+    per_site_scaling_enabled        = optional(bool)
     zone_balancing_enabled          = optional(bool, false)
     tags                            = optional(map(string))
   }))
@@ -121,11 +121,7 @@ To update the module's documentation run `make doc`
 
 We welcome contributions from the community! Whether it's reporting a bug, suggesting a new feature, or submitting a pull request, your input is highly valued.
 
-For more information, please see our contribution [guidelines](./CONTRIBUTING.md). <br><br>
-
-<a href="https://github.com/cloudnationhq/terraform-azure-plan/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=cloudnationhq/terraform-azure-plan" />
-</a>
+For more information, please see our contribution [guidelines](./CONTRIBUTING.md).
 
 ## License
 
